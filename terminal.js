@@ -5,7 +5,7 @@ var currentLine = document.getElementsByClassName('line')[0];
 function terminal(inp){
 
   if(inp.value[inp.value.length -1] == '\n'){
-    
+
     var argv = inp.value.substr(0, inp.value.length -1).split(' ');
 
     inp.value = '';
@@ -33,7 +33,7 @@ function process(argv){
 
   }
 
-  currentLine.innerHTML = currentLine.innerHTML.replace(caret, '');
+  currentLine.innerHTML = currentLine.innerHTML.replace(caret, ' ');
 
   currentLine = document.createElement('div');
   currentLine.className = 'line';
