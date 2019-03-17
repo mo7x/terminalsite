@@ -5,9 +5,8 @@ var currentLine = document.getElementsByClassName('line')[0];
 function terminal(inp){
 
   if(inp.value[inp.value.length -1] == '\n'){
+    
     var argv = inp.value.substr(0, inp.value.length -1).split(' ');
-
-    currentLine.innerHTML =currentLine.innerHTML.replace(caret,'');
 
     inp.value = '';
 
@@ -20,7 +19,6 @@ function terminal(inp){
     currentLine.innerHTML = 'guest@m0.wtf:/$&nbsp;' + sInp + caret;
 
   }
-
 }
 
 function process(argv){
@@ -30,18 +28,25 @@ function process(argv){
   }
   */
   if(argv[0]){
+
     echo('\n<strong>' + argv[0] + '</strong> : command not found');
+
   }
+
+  currentLine.innerHTML = currentLine.innerHTML.replace(caret, '');
 
   currentLine = document.createElement('div');
   currentLine.className = 'line';
   currentLine.innerHTML = 'guest@m0.wtf:/$&nbsp;' + caret;
   document.body.appendChild(currentLine);
+
 }
 
 function echo(msg){
+
   var newLine = document.createElement('div');
   newLine.className = 'line';
   document.body.appendChild(newLine);
   newLine.innerHTML = msg;
+
 }
