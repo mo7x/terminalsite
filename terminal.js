@@ -7,9 +7,9 @@ function terminal(inp){
   if(inp.value[inp.value.length -1] == '\n'){
     var argv = inp.value.substr(0, inp.value.length -1).split(' ');
 
-    inp.value = '';
+    currentLine.innerHTML =currentLine.innerHTML.replace(caret,'');
 
-    currentLine.innerHTML =currentLine.innerHTML.replace(caret,'')
+    inp.value = '';
 
     process(argv);
   }
