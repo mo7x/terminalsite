@@ -1,6 +1,7 @@
 let caret = '<span id="caret"></span>';
 
 var currentLine = document.getElementsByClassName('line')[0];
+currentLine.innerHTML = 'guest@m0.wtf:/$&nbsp;' + caret;
 
 function terminal(inp){
 
@@ -33,7 +34,7 @@ function process(argv){
 
   }
 
-  currentLine.innerHTML = currentLine.innerHTML.replace(caret, ' ');
+  currentLine.innerHTML = currentLine.innerHTML.replace(/<\/?span[^>]*>/g,'');
 
   currentLine = document.createElement('div');
   currentLine.className = 'line';

@@ -14,14 +14,16 @@
 
   </head>
   <body onclick="document.getElementById('input').focus()">
+
+    <textarea id="input" onblur="this.focus()" oninput="terminal(this)" autofocus></textarea>
+
     <div id = "init">
     welcome to m0.wtf. &copy; Mohamad Alsadhan 2019<br>
     type <strong style = "color:green">help</strong> for help/commands.<br>
     </div>
-    <div class = 'line'>
-      guest@m0.wtf:/$&nbsp;<span id="caret"></span>
-    </div>
-    <textarea id="input" onblur="this.focus()" oninput="terminal(this)" autofocus></textarea>
+    <div class = 'line'></div>
+
   </body>
+  
   <script src="terminal.js"></script>
 </html>
