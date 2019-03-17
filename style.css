@@ -1,0 +1,74 @@
+@font-face {
+  font-family: UbuntuMono;
+  src: url(assets/UbuntuMono-R.ttf);
+}
+@font-face {
+  font-family: UbuntuMono;
+  src: url(assets/UbuntuMono-B.ttf);
+  font-weight: bold;
+}
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body{
+  background-color: black;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+#input {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 0px;
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  opacity: 0;
+}
+
+#init{
+  padding-left: 5px;
+  position: relative;
+  font-family: UbuntuMono;
+  color: white;
+}
+
+#cmd{
+  position: absolute;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  padding-left: 5px;
+  padding-top: 5px;
+  font-family: UbuntuMono;
+  color: white;
+}
+
+#caret {
+  width: 0.4em;
+  height: 1em;
+  background: #606060;
+  position: absolute;
+  animation: blink 1s infinite;
+  -webkit-animation: blink 1s step-end infinite;
+}
+
+@-webkit-keyframes blink {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+@keyframes blink {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
