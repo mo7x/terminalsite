@@ -119,6 +119,8 @@ function process(argv) {
             echo('<iframe id ="lightsout" src="https://editor.p5js.org/mohamadalsadhan/embed/bjOzsPLLt"></iframe>');
         }else if(cd[0] === 'misc' && argv[0] === 'duckshooter.exe'){
             echo('<iframe id ="duckshooter" src="https://editor.p5js.org/mohamadalsadhan/embed/HyUr4-wYQ"></iframe>');
+        }else if (argv[0]) {
+            echo('\n<strong>' + argv[0] + '</strong> : command not found');
         }
 
     } else if (argv[0] === 'me.txt' && cd.length === 0) {
