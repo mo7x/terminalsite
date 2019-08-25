@@ -20,7 +20,7 @@ var cd = [];
 function terminal(inp) {
 
     sInp = inp.value.replace(/\s/g, '&nbsp;');
-    //pesky workaround
+    //workaround
     if(sInp.substr(0, 6) == '&nbsp;'){
       sInp = sInp.substr(6);
     }
@@ -36,7 +36,6 @@ function process(argv) {
     if(argv[0]){
       try{
         getLocation(cd)[argv[0]]();
-
       }catch{
           try{
             command = argv.shift();

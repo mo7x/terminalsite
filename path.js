@@ -23,15 +23,14 @@ path.contact = {
 };
 // -----------------------------------------------------------------------------
 path.misc = {
-  'duckshooter.exe' : () => echo('<iframe id ="duckshooter" src="https://editor.p5js.org/mohamadalsadhan/embed/HyUr4-wYQ"></iframe>'),
-  'lightsout.exe' : () => echo('<iframe id ="lightsout" src="https://editor.p5js.org/mohamadalsadhan/embed/bjOzsPLLt"></iframe>')
+  'duckshooter.exe' : () => echo('<iframe id ="duckshooter" src="https://editor.p5js.org/mohamadalsadhan/embed/HyUr4-wYQ"></iframe>')
 };
 // -----------------------------------------------------------------------------
 path.projects =
   () => {echo('This path seems to be empty');
         setTimeout(echo('...<strong>admin</strong> seems to be lazy'), 1250);};
 // -----------------------------------------------------------------------------
-path['me.txt'] = () => echo('I\'m currently a student at Exeter Maths School, I like maths and computer science and I try hard to be interesting.');
+path['me.txt'] = () => echo('I\'m currently a student at Exeter Maths School, I like maths and computer science and I try hard to look interesting.');
 // -----------------------------------------------------------------------------
 function getLocation(c){
   c = [...c];
