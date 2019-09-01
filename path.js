@@ -28,7 +28,7 @@ path.misc = {
 // -----------------------------------------------------------------------------
 path.projects =
   () => {echo('This path seems to be empty');
-        setTimeout(echo('...<strong>admin</strong> seems to be lazy'), 1250);};
+        echo('...<strong>admin</strong> seems to be lazy');};
 // -----------------------------------------------------------------------------
 path['me.txt'] = () => echo('I\'m currently a student at Exeter Maths School, I like maths and computer science and I try hard to look interesting.');
 // -----------------------------------------------------------------------------
