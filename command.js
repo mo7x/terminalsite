@@ -27,10 +27,8 @@ commands.clear = () => {
 commands.cd = function(args) {
   var dirs = (args + '')
     .split('/');
-  console.log(dirs)
-  var cpath = path;
+  var cpath = cd.length > 0 ? getLocation(cd) : path;
   for (var dir of dirs) {
-    console.log("dir: "+dir)
     if (dir === '..') {
       dirs.shift();
       if (cd.length > 0) {
@@ -39,8 +37,7 @@ commands.cd = function(args) {
     } else if (dir === '.' || dir === "") {
       dirs.shift();
     } else {
-      if (dir in cpath) {
-        console.log("flag-0")
+      if (dir in cpath) {  
         try {
           getLocation(cd)[dir]();
         } catch (err){

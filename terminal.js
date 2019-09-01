@@ -6,6 +6,7 @@ document.addEventListener('click', function(e) {
 });
 
 var input = document.getElementById('input')
+input.value = ""
 
 document.addEventListener("keydown", function (e) {
     if (e.keyCode === 13) {
@@ -20,6 +21,7 @@ var cd = [];
 function terminal(inp) {
 
     sInp = inp.value.replace(/\s/g, '&nbsp;');
+  
     //workaround
     if(sInp.substr(0, 6) == '&nbsp;'){
       sInp = sInp.substr(6);
@@ -36,7 +38,7 @@ function process(argv) {
     if(argv[0]){
       try{
         getLocation(cd)[argv[0]]();
-      }catch{
+      }catch(err){
           try{
             command = argv.shift();
             commands[command](argv);
