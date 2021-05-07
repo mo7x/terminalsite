@@ -1,5 +1,5 @@
 # m0hdas.github.io
-personal terminal/command line website -- try it out on www.m0.wtf
+personal terminal/command line website
 ---
 just a simple command line with no JQuery, no dependicies just vanilla JS (es6).
 
